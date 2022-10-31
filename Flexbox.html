@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type">
+</head>
+<body>
+<div class="containter">
+    <header class="header">
+        <h1>Flexbox</h1>
+    </header>
+    <div class="navbar">
+        <a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a>
+        <a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a>
+        <a href="https://www.w3schools.com/css/css3_flexbox.asp">Flexbox Tutorial</a>
+        <a href="https://www.w3schools.com/css/css_grid.asp">Grid Tutorial</a>
+    </div>
+    <main class="main">
+        <h1 style="padding: 15px;">Flexbox</h1>
+        <div class="text">
+            <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. 
+            The elements in Flexbox are arranged in the same plane: column or row. There are several ways to change their display method.</p>
+            <br><p>The flex container properties are:</p><br>
+            <ul>
+                <li>flex-direction</li>
+                <li>flex-wrap</li>
+                <li>flex-flow</li>
+                <li>justify-content</li>
+                <li>align-items</li>
+                <li>align-content</li>
+            </ul>
+            <p>In the pictures below you can clearly see how it works.</p>
+        </div>
+        <div class="row"> 
+            <div class="column">
+              <img src="https://miro.medium.com/max/1452/1*ONGIuAkxpgCsxcZEziweyg.jpeg" style="width:100%">
+              <img src="https://highload.today/wp-content/uploads/2022/01/5-1.jpg" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2014/10/justify-content-illustration.jpg" style="width:100%">
+              <img src="https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2014/10/align-items-illustration.jpg" style="width:100%">
+            </div> 
+            <div class="column">
+                <img src="https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2014/10/align-content-illustration.jpg" style="width:100%">
+                <img src="https://basicweb.ru/css/primer/210.png" style="width:100%">
+            </div>
+        </div>
+        <div class="text"><p>You can use media queries to create different layouts for different screen sizes and devices.
+            For example, if you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets), 
+            you can change the flex-direction from row to column at a specific breakpoint (800px in the example below):</p></div>
+        <div class="text"><pre><code>.flex-container {
+            display: flex;
+            flex-direction: row;
+          }
+          
+          /* Responsive layout - makes a one column layout instead of a two-column layout */
+          @media (max-width: 800px) {
+            .flex-container {
+              flex-direction: column;
+            }
+          }
+        </code></pre></div>
+        <div class="text"><h3>Child Elements (Items)</h3>
+            <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+            <h3>The order Property</h3>
+            <p>The order property specifies the order of the flex items. The first flex item in the code does not have to appear as the first item in the layout.
+               The order value must be a number, default value is 0. For example:
+            </p>
+            <pre><code>&lt;div class&equals;&quot;flex-container&quot;&gt;
+    &lt;div style&equals;&quot;order&colon; 3&quot;&gt;1&lt;&sol;div&gt;
+    &lt;div style&equals;&quot;order&colon; 2&quot;&gt;2&lt;&sol;div&gt;
+    &lt;div style&equals;&quot;order&colon; 4&quot;&gt;3&lt;&sol;div&gt;
+    &lt;div style&equals;&quot;order&colon; 1&quot;&gt;4&lt;&sol;div&gt;
+              </div></code></pre>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Made by Iaroslav Bashko</p>
+    </footer>
+</div>
+</body>
+</html>
